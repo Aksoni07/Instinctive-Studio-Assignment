@@ -27,7 +27,7 @@ const studenReducer = (state = initialState, action) => {
         case DELETE_STUDENTS:
             let newArr = state.studentsArray.filter((student, index) => {
                 let exists = false;
-                exists = action.deletionArr.some((id) => id === student.email)
+                exists = action.deletionArr.some((id) => id === student.email);
                 return !exists;
             })
             return {
